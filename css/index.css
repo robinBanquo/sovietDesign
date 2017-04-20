@@ -20,6 +20,9 @@ body{
     width: 100%;
 
 }
+main{
+    margin-top: 16vh;
+}
 header{
     position:fixed;
     top: 0;
@@ -31,4 +34,9 @@ footer{
     bottom: 0px;
     height: 10vh;
     width: 100%;
+}
+
+/*regles de style du main*/
+.i-menu{
+    text-align: center;
 }

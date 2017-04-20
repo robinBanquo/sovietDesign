@@ -8,6 +8,8 @@ class Data
 {
   private $_books = [];
   private $_admins = [];
+  private $_age = [ '0-3' , '3-7' , '7-11', '11-18', "18-21"];
+  private $_img = ['img1.png','img2.png','img3.png','img4.png','img5.png','img6.png','img7.png'];
 
 
   //constructeur d'un objet unique : le tableau avec les données
@@ -48,6 +50,25 @@ class Data
       return $admins[$id];
       # code...
   }
+  public function Age()
+  {
+      return $this->_age ;
+  }
+  //renvoie un tableau avec  @number  livres aléatoires ayant l'age demandé (en string)
+  public function BooksByAge( $age, $number)
+  {
+      $result = [];
+      $books = $this->_books;
+      shuffle($books);
+
+        foreach ( $books as $book) {
+            if (($book['age']== $age) && (count($result)) < $number)// on rempli que jusqu'a ce que le nombre de livre a prendre soit atteint.
+            {
+                $result[] = $book;
+            }
+        }
+      return $result;
+  }
 
 //retrourne un tableau associatif contenant 1 livre unique
   private function BookGenerator(int $x, $booksNumber)
@@ -57,13 +78,17 @@ class Data
       'title' => ('Harry Potter '. $x) ,
       'author'=> ('J. K. Rowling n°' . $x),
       'category'=> $this->Category($x,$booksNumber),
-      'age'=> $this->Age($x,$booksNumber),
-      'img' => ('./../img/img'.$x.'.png'),
+      'age'=> $this->AgePref($x,$booksNumber),
+      'img' => $this->ImageAssignation(),
       'date' => 2000 + $x,
       'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     );
   }
-
+    private function ImageAssignation(){
+        $imglist = $this->_img ;
+        shuffle($imglist);
+        return './../img/' . $imglist[0] ;
+    }
   //retrourne un tableau associatif contenant 1 administrateur unique
     private function AdminGenerator(int $x)
     {
@@ -83,13 +108,13 @@ class Data
     }
 
 // prends l'id du livre et le nombre total de livres à créer et renvoie l'age recommandé' (string)
-    public function Age($x, $booksNumber)
+    public function AgePref($x, $booksNumber)
     {//on crée un tableau avec toutes nos catégories
-        $age = [ '0-3' , '3-7' , '7-11', '11-18'];
+        $age = $this->_age;
         //on determine le nombre de livres a placer dans chacunes des tranches d'age en fonction du nombre total de livres à créer
-        $numberOfBoofWeHaveToPlaceInEachAge = intval( $booksNumber / count($age));
+        $numberOfBoofWeHaveToPlaceInEachAge = intval( $booksNumber / count($age) + 1);
         //on renvoie la catégorie du livre en fonction de son ID
-        return $age[round( $x / $numberOfBoofWeHaveToPlaceInEachAge)-1];
+        return $age[(round( $x / $numberOfBoofWeHaveToPlaceInEachAge))];
     }
 }
 
@@ -97,9 +122,11 @@ class Data
 
 
 //TESTS
-
- $data = new Data(5,1);
- var_dump($data);
- var_dump( $data->SelectBook(2));
-
-//Tests validés (du premier coup!!!)
+// //
+//  $data = new Data(20,1);
+// //var_dump($data->Books());
+//
+// print "ET MAINTENANT LES TESTS DES FONCTIONS";
+// var_dump($data->BooksByAge('0-3', 4));
+//
+// Tests validés ()
