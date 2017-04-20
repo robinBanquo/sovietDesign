@@ -9,7 +9,7 @@ class Data
   private $_books = [];
   private $_admins = [];
   private $_age = [ '0-3' , '3-7' , '7-11', '11-18', "18-21"];
-  private $_img = ['img1.png','img2.png','img3.png','img4.png','img5.png','img6.png','img7.png'];
+  private $_img = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg','img8.jpg','img9.jpg','img10.jpg','img11.jpg'];
 
 
   //constructeur d'un objet unique : le tableau avec les données
@@ -87,7 +87,7 @@ class Data
     private function ImageAssignation(){
         $imglist = $this->_img ;
         shuffle($imglist);
-        return './../img/' . $imglist[0] ;
+        return './img/couv/' . $imglist[0] ;
     }
   //retrourne un tableau associatif contenant 1 administrateur unique
     private function AdminGenerator(int $x)
