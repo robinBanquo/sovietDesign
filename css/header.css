@@ -1,0 +1,65 @@
+header {
+  display: flex;
+  min-height: 70px;
+}
+
+.margin {
+  min-height: 70px;
+}
+
+.cadreLOGO {
+  flex: 2;
+  display: flex;
+}
+
+.logo {
+flex: 1;
+display: flex;
+}
+
+img {
+  margin: auto;
+  min-width: 0;
+  min-height: 0;
+  height: 15vh;
+  width: 17vh;
+  /*height: 100%;*/
+}
+
+.Title {
+  flex: 6;
+  display: flex;
+}
+
+#TitleHead {
+  text-align: right;
+  font-size: 7vh;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+.research {
+  flex: 6;
+  display: flex;
+}
+
+.Search {
+  flex: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10%;
+  margin-left: 10%;
+  display: flex;
+}
+
+.champ {
+  flex: 11;
+}
+
+.bouton {
+  text-align: center;
+  height: 5vh;
+  width: 5vh;
+  background-color: #E8B960;
+}
