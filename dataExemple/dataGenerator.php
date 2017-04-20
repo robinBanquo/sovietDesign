@@ -8,24 +8,22 @@ class Data
 {
   private $_books = [];
   private $_admins = [];
-  private $_unicity = true;
+
 
   //constructeur d'un objet unique : le tableau avec les données
   function __construct(int $booksNumber, int $adminsNumber)
   {
 
-    if ($this->_unicity) {
-      # code...
+
     //création du tableau des livres
-    for ($i=0; $i < ($booksNumber - 1) ; $i++) {
+    for ($i=0; $i < $booksNumber ; $i++) {
       $this->_books[$i] = $this->BookGenerator($i);
     }
     //création du tableau des Admins
-    for ($i=0; $i < ($adminsNumber - 1) ; $i++) {
+    for ($i=0; $i < $adminsNumber ; $i++) {
       $this->_admins[$i] = $this->AdminGenerator($i);
     }
-    $this->_count = false;//quant un objet a été créé, on passe cette variable à false
-    }
+
   }
 
   //retourne la table des livres
@@ -63,3 +61,10 @@ class Data
       );
     }
 }
+
+//TESTS
+
+// $data = new Data(5,1);
+// var_dump($data);
+
+//Tests validés (du premier coup!!!)
