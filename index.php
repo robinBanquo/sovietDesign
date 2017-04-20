@@ -4,15 +4,25 @@
 include './template/head.php';
 ?>
 <body>
-<?php
-include './template/header.php';
-?>
+    <header>
+        <?php
+        include './template/header.php';
+        ?>
+    </header>
+    <div class="margin">
+
+    </div>
 <main>
+
 <!-- inclure ici tout les elements du conteneur principal -->
 <h1>Coucou</h1>
 </main>
+<footer>
 <?php
 include './template/footer.php';
+?>
+</footer>
+<?php
 include './template/foot.php';
 ?>
 </body>
