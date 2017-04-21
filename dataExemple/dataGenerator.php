@@ -15,8 +15,6 @@ class Data
   //constructeur d'un objet unique : le tableau avec les données
   function __construct(int $booksNumber, int $adminsNumber)
   {
-
-
     //création du tableau des livres
     for ($i=1; $i <= $booksNumber ; $i++) {
       $this->_books[$i] = $this->BookGenerator($i,$booksNumber);
@@ -25,34 +23,40 @@ class Data
     for ($i=1; $i <= $adminsNumber ; $i++) {
       $this->_admins[$i] = $this->AdminGenerator($i);
     }
-
   }
+  //GETERS :
 
   //retourne la table des livres
   public function Books()
   {
     return $this->_books;
   }
+
+   //retourne le tableau associatif des admins
+  public function Admins()
+  {
+    return $this->_admins;
+  }
+  // retourne le tableau des differentes tranches d'ages
+  public function Age()
+  {
+      return $this->_age ;
+  }
+
+  //GETTERS BY ID
+  //pour les livres
   public function SelectBook($id)
   {
       $books = $this->Books();
       return $books[$id];
       # code...
   }
-   //retourne le tableau associatif des admins
-  public function Admins()
-  {
-    return $this->_admins;
-  }
+  //pour les admins
   public function SelectAdmin($id)
   {
       $admins =  $this->Admins;
       return $admins[$id];
       # code...
-  }
-  public function Age()
-  {
-      return $this->_age ;
   }
   //renvoie un tableau avec  @number  livres aléatoires ayant l'age demandé (en string)
   public function BooksByAge( $age, $number)
@@ -70,6 +74,8 @@ class Data
       return $result;
   }
 
+  //LES METHODES PRIVEES : Les Rouages de la classe
+
 //retrourne un tableau associatif contenant 1 livre unique
   private function BookGenerator(int $x, $booksNumber)
   {
@@ -84,20 +90,24 @@ class Data
       'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
     );
   }
+
+//retourne le tableau associatif des admins
+  private function AdminGenerator(int $x)
+  {
+    return array(
+      'id' => $x,
+      'name' => ('Monique '. $x) ,
+      'password'=> 'pelardon',
+    );
+  }
+
+  //méthode utilisée pour mettre une image aléatoire a chaque livre (choisie parmis le tableau img des attributs de classe)
     private function ImageAssignation(){
         $imglist = $this->_img ;
         shuffle($imglist);
         return './img/couv/' . $imglist[0] ;
     }
-  //retrourne un tableau associatif contenant 1 administrateur unique
-    private function AdminGenerator(int $x)
-    {
-      return array(
-        'id' => $x,
-        'name' => ('Monique '. $x) ,
-        'password'=> 'pelardon',
-      );
-    }
+
     // prends l'id du livre et le nombre total de livres à créer et renvoie la catégorie (string)
     private function Category($x, $booksNumber)
     {//on crée un tableau avec toutes nos catégories
@@ -108,7 +118,7 @@ class Data
     }
 
 // prends l'id du livre et le nombre total de livres à créer et renvoie l'age recommandé' (string)
-    public function AgePref($x, $booksNumber)
+    private function AgePref($x, $booksNumber)
     {//on crée un tableau avec toutes nos catégories
         $age = $this->_age;
         //on determine le nombre de livres a placer dans chacunes des tranches d'age en fonction du nombre total de livres à créer

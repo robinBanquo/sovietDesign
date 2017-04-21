@@ -16,7 +16,7 @@ include './template/head.php';
 
         <!-- inclure ici tout les elements du conteneur principal -->
         <div class="">
-
+            <!-- selecteur our naviguer sur la page en fonction des ages -->
             <nav class="i-menu">
                 <?php
                 include_once "./dataExemple/dataGenerator.php";
