@@ -20,7 +20,8 @@ include './template/head.php';
             <nav class="i-menu">
                 <?php
                 include_once "./dataExemple/dataGenerator.php";
-                $data = new Data(30,1);
+                // include_once './dataExemple/initialize.php';
+                $data = new Data(40,1);
                 $ageTable = $data->Age();
                 //affiche les differentes catégories d'age de manière dynamique
                 foreach ($ageTable as $age)
@@ -46,6 +47,9 @@ include './template/head.php';
                                     <h3 class="i-book-title"><?= $book['title'] ?></h3>
                                 </div>
                                 <div class="i-invisible">
+                                    <h3 class="i-book-title"><?= $book['title'] ?></h3>
+                                    <p class="i-book-author"><?= $book['author'] ?></p>
+                                    <p class="i-book-description"><?= $book['description'] ?></p>
                                     <a class ="i-linktoshow" href="./show.php?id=<?=$book['id']?>">Voir fiche détaillée</a>
                                 </div>
                             </div>
