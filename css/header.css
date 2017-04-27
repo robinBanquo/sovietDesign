@@ -8,6 +8,7 @@ header {
   min-height: 70px;
   border-bottom: 4px solid Black;
   background-color: rgba(189, 250, 227, 0.81);
+  z-index: 10;
 }
 
 .margin {
