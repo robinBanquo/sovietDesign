@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link type="text/css" rel="stylesheet" media="all" title="CSS" href="header.css" />
+  <link type="text/css" rel="stylesheet" media="all" title="CSS" href="./css/header.css" />
 </head>
 <?php
 include './template/head.php';
