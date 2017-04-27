@@ -1,0 +1,131 @@
+/**{
+  border: 1px solid red;
+}*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  min-height: 70px;
+  border-bottom: 4px solid Black;
+  background-color: rgba(189, 250, 227, 0.81);
+}
+
+.margin {
+  min-height: 70px;
+}
+
+.cadreLOGO {
+  flex: 2;
+  display: flex;
+}
+
+.logo {
+flex: 1;
+display: flex;
+}
+
+img {
+  margin: auto;
+  min-width: 0;
+  min-height: 0;
+  height: 15vh;
+  width: 15vh;
+  min-height: 70px;
+  min-width: 70px;
+  /*height: 100%;*/
+}
+
+.Title {
+  flex: 6;
+  display: flex;
+}
+
+#TitleHead {
+  text-align: right;
+  font-size: 35px;
+  max-height: 50px;
+  min-width: 40px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  padding-right: 11%;
+}
+@media screen and (max-width: 600px) {
+  @media screen and (max-width: 470px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      min-height: 70px;
+      border-bottom: none;
+    }
+    .research {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 4px solid Black;
+    }
+    .margin {
+      min-height: 112px;
+    }
+  }
+  .Global_title {
+    display: flex;
+    position: relative;
+  }
+  .cadreLOGO {
+    position: absolute;
+  }
+  .logo {
+    display: flex;
+    flex: 1;
+  }
+  .Title {
+    position: absolute;
+    height: 100%;
+    flex: 1;
+    display: flex;
+  }
+  img {
+    margin: auto;
+    filter: opacity(35%);
+    height: 15vh;
+    width: 48vw;
+    text-align: center;
+  }
+  #TitleHead {
+    text-align: right;
+    font-size: 5vw;
+    max-height: 90px;
+    min-width: 50px;
+    height: 100%
+    margin:none;
+  }
+}
+
+.research {
+  flex: 6;
+  display: flex;
+  background-color: rgba(189, 250, 227, 0.81);
+}
+
+.Search {
+  flex: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10%;
+  margin-left: 10%;
+  display: flex;
+}
+
+.champ {
+  flex: 11;
+}
+
+.bouton {
+  border-radius: 3px;
+  text-align: center;
+  height: 5vh;
+  width: 5vh;
+  min-height: 26px;
+  min-width: 26px;
+  background-color: #E8B960;
+}

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
+<head>
+  <link type="text/css" rel="stylesheet" media="all" title="CSS" href="./css/header.css" />
+</head>
 <?php
 include './template/head.php';
 ?>
@@ -14,6 +17,7 @@ include './template/head.php';
         </div>
         <main>
 
+<<<<<<< HEAD
         <!-- inclure ici tout les elements du conteneur principal -->
         <div class="i-menu-container">
             <!-- selecteur our naviguer sur la page en fonction des ages -->
@@ -74,4 +78,17 @@ include './template/head.php';
         include './template/foot.php';
         ?>
     </body>
+=======
+<!-- inclure ici tout les elements du conteneur principal -->
+</main>
+<footer>
+<?php
+include './template/footer.php';
+?>
+</footer>
+<?php
+include './template/foot.php';
+?>
+</body>
+>>>>>>> Audric
 </html>
