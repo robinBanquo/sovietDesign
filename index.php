@@ -15,13 +15,16 @@ include './template/head.php';
         <main>
 
         <!-- inclure ici tout les elements du conteneur principal -->
-        <div class="">
+        <div class="i-menu-container">
             <!-- selecteur our naviguer sur la page en fonction des ages -->
             <nav class="i-menu">
                 <?php
-                include_once "./dataExemple/dataGenerator.php";
+                include "./dataExemple/dataGenerator.php";
                 // include_once './dataExemple/initialize.php';
-                $data = new Data(40,1);
+
+                $data = New Data(100,1);
+
+
                 $ageTable = $data->Age();
                 //affiche les differentes catégories d'age de manière dynamique
                 foreach ($ageTable as $age)
@@ -37,6 +40,7 @@ include './template/head.php';
                         //création de chaque conteneur de livres classés par age
                         echo '<div class="i-age" id="i-' . $age . '">';
                         echo '<h2 class="i-age-title">' . $age . ' ans</h3>';
+                        echo '<div class="i-book-container">';
                         // affichage de chaque livre
                         $books = $data->BooksByAge($age, 12);//on utilise la methode qui permet de nous sortir $n livres selon l'age au hazard
                         foreach ($books as $book)  {
@@ -55,6 +59,7 @@ include './template/head.php';
                             </div>
                             <?php
                         }
+                        echo '</div>';
                         echo '</div>';
                     }
                  ?>

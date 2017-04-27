@@ -13,7 +13,7 @@ class Data
 
 
   //constructeur d'un objet unique : le tableau avec les données
-  function __construct(int $booksNumber, int $adminsNumber)
+ public function __construct(int $booksNumber, int $adminsNumber)
   {
     //création du tableau des livres
     for ($i=1; $i <= $booksNumber ; $i++) {
@@ -24,6 +24,8 @@ class Data
       $this->_admins[$i] = $this->AdminGenerator($i);
     }
   }
+  //on utilisera cette methode statique pour créer l'instance unique
+
   //GETERS :
 
   //retourne la table des livres

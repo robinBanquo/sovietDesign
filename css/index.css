@@ -22,6 +22,13 @@ body{
 }
 main{
     margin-top: 16vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 60vw;
+    background-attachment: scroll;
 }
 header{
     position:fixed;
@@ -30,7 +37,7 @@ header{
     width: 100%;
 }
 footer{
-    position:absolute;
+    position:relative;
     bottom: 0px;
     height: 10vh;
     width: 100%;
@@ -39,4 +46,78 @@ footer{
 /*regles de style du main*/
 .i-menu{
     text-align: center;
+    margin: 3vh;
 }
+.i-menu a{
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 2vw;
+    margin: 1vh;
+}
+.i-menu a:hover{
+    color: #004867;
+}
+.i-invisible{
+    display: none;
+}
+.i-central{
+    max-width: 1100px;
+    margin: auto;
+}
+.i-age{
+    margin-top: 3vh;
+}
+.i-age-title{
+text-align: center;
+}
+.i-book-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.i-book{
+    width: 12vw;
+    height: 20vw;
+    padding: 0.3vw;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+.i-visible{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.i-visible h3{
+    position: relative;
+    bottom: 0;
+    margin: 1vh;
+    font-size: 100%;
+}
+.i-visible img{
+
+    height: 17vw;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+
+}
+.i-book{
+background-color: #232323;
+color: white;
+}
+/*
+#i-0-3 .i-book , #i-0-3 .i-age-title{
+    background-color: #3FA9C3;
+}
+#i-3-7 .i-book , #i-3-7 .i-age-title{
+    background-color: #F9BC0B;
+}
+#i-7-11 .i-book , #i-7-11 .i-age-title{
+    background-color: #CB4FA3;
+}
+#i-11-18 .i-book , #i-11-18 .i-age-title{
+    background-color: #68BCAC;
+}*/
