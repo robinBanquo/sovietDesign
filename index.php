@@ -17,7 +17,6 @@ include './template/head.php';
         </div>
         <main>
 
-<<<<<<< HEAD
         <!-- inclure ici tout les elements du conteneur principal -->
         <div class="i-menu-container">
             <!-- selecteur our naviguer sur la page en fonction des ages -->
@@ -78,7 +77,7 @@ include './template/head.php';
         include './template/foot.php';
         ?>
     </body>
-=======
+
 <!-- inclure ici tout les elements du conteneur principal -->
 </main>
 <footer>
