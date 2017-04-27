@@ -18,7 +18,6 @@ include './template/head.php';
 <main>
 
 <!-- inclure ici tout les elements du conteneur principal -->
-<h1>Audric</h1>
 </main>
 <footer>
 <?php

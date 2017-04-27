@@ -1,12 +1,13 @@
-<div class="cadreLOGO">
-  <div class="logo">
-   <img src="img/logo.png" alt="logo" id="LOGO"/>
+<div class="Global_title"
+  <div class="cadreLOGO">
+    <div class="logo">
+     <img src="img/logo.png" alt="logo" id="LOGO"/>
+    </div>
   </div>
+    <div class="Title">
+      <h1 id="TitleHead">Biblio-Jeune</h1>
+    </div>
 </div>
-<div class="Title">
-  <h1 id="TitleHead">Biblio-Jeune</h1>
-</div>
-
 <div class="research">
   <form class="Search" action="index.html" method="post">
     <input class="champ" type="text" placeholder="Search..."/>
