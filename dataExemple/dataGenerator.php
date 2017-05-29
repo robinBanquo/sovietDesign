@@ -56,7 +56,7 @@ class Data
   //pour les admins
   public function SelectAdmin($id)
   {
-      $admins =  $this->Admins;
+      $admins =  $this->Admins();
       return $admins[$id];
       # code...
   }
@@ -124,9 +124,9 @@ class Data
     {//on crée un tableau avec toutes nos catégories
         $age = $this->_age;
         //on determine le nombre de livres a placer dans chacunes des tranches d'age en fonction du nombre total de livres à créer
-        $numberOfBoofWeHaveToPlaceInEachAge = intval( $booksNumber / count($age) + 1);
+        $numberOfBookWeHaveToPlaceInEachAge = intval( $booksNumber / count($age) + 1);
         //on renvoie la catégorie du livre en fonction de son ID
-        return $age[(round( $x / $numberOfBoofWeHaveToPlaceInEachAge))];
+        return $age[(round( $x / $numberOfBookWeHaveToPlaceInEachAge))];
     }
 }
 

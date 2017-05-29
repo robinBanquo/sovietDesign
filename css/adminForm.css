@@ -1,0 +1,41 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+.background{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-image: url("./../img/admin/library-fantasy_00251545.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    top:0;
+}
+.admin_connect{
+
+    height: 100vh;
+    width: 100%;
+    color: white;
+
+
+
+}
+.admin_connect form{
+    position: relative;
+    margin-top: 25vh;
+    text-align: center;
+    background-color: #0f0d10;
+    border-radius: 5px;
+    z-index: 10;
+}
+.admin_connect h3{
+    text-align: center;
+}
+.admin_connect .btn{
+    width: 95%;
+    text-align: center;
+    background-color: dimgrey;
+    color: white;
+}
