@@ -20,6 +20,7 @@ include './template/head.php';
 
 
     <section class=""perso">
+<<<<<<< Updated upstream
 
     <img id="garfield" src="img/index/Garfield-et-cie.png" alt="">
         <img id="t-rex" src="img/index/T-REX.png" alt="">
@@ -40,6 +41,19 @@ include './template/head.php';
     </section>
 
 
+=======
+    <img id="garfield" src="img/index/Garfield-et-cie.png" alt="">
+    <img id="t-rex" src="img/index/T-REX.png" alt="">
+    <img id="harry" src="img/index/Harry.Potter.full.183172.png" alt="">
+    <a href="index.php"><img id="lampe" src="img/index/lampe de face final.png" alt=""></a>
+    <img src="" alt="">
+    </section>
+    <section class="hover">
+        <img id="cat1" src="img/index/Cat 1.png" alt="">
+        <img id="cat2" src="img/index/cat 2.png" alt="">
+        <img id="cat3" src="img/index/cat 3.png" alt="">
+    </section>
+>>>>>>> Stashed changes
 </main>
 </footer>
 <?php
