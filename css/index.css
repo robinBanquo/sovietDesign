@@ -1,29 +1,15 @@
+body{
 
-html, body{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-main{
-    background-image:url(../img/index/524c8c68ada0f6cdff11d6d70d3fc622.jpg);
+    background-image: url(../img/index/524c8c68ada0f6cdff11d6d70d3fc622.jpg);
+    -webkit-background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-position: left;
-    background-size:cover;
-    top:0;
-    left:0;
-    height: 100vh;
 
 }
-
-
 
 #lapin{
 position:absolute;
 left:10vw;
 top:55vh;
-
-
 
 }
 

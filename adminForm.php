@@ -10,6 +10,7 @@
         <div class="background">
 
         </div>
+
         <section class="admin_connect">
             <form action="" class="form-horizontal col-sm-6 col-sm-offset-3" role="form">
                 <h3>Connexion Administrateur</h3>

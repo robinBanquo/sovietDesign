@@ -12,15 +12,14 @@ include './template/head.php';
         <div id ="div"> <img id="bulle" src="img/index/nTBMGgkkc.png">
             <img id="lapin" src="img/index/lapin.png" alt="">
             <form action="#" method="post">
-                <input id="search" type="search" placeholder="Rechercher"></input>
-                <input id="sbmt" type="submit"></input>
+                <input id="search" type="search" placeholder="Rechercher">
+                <input id="sbmt" type="submit">
             </form>
         </div>
-    </section >
+    </section>
 
 
     <section class=""perso">
-<<<<<<< Updated upstream
 
     <img id="garfield" src="img/index/Garfield-et-cie.png" alt="">
         <img id="t-rex" src="img/index/T-REX.png" alt="">
@@ -30,8 +29,6 @@ include './template/head.php';
 
     </section>
 
-
-
     <section class="hover">
 
     <img id="cat1" src="img/index/Cat 1.png" alt="">
@@ -40,8 +37,6 @@ include './template/head.php';
 
     </section>
 
-
-=======
     <img id="garfield" src="img/index/Garfield-et-cie.png" alt="">
     <img id="t-rex" src="img/index/T-REX.png" alt="">
     <img id="harry" src="img/index/Harry.Potter.full.183172.png" alt="">
@@ -53,7 +48,6 @@ include './template/head.php';
         <img id="cat2" src="img/index/cat 2.png" alt="">
         <img id="cat3" src="img/index/cat 3.png" alt="">
     </section>
->>>>>>> Stashed changes
 </main>
 </footer>
 <?php
